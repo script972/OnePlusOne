@@ -1,6 +1,24 @@
 
 <?php get_header();  ?>
-
+<div class="banerBack">
+	<div class="baner">
+		<div class="left">
+			<div class="triangel"></div>
+			<p>$99 + $200</p>
+		</div>
+		<div class="arrGetBg">
+			<div class="arrGet">Get started now</div>
+			<div class="arrRight"></div>
+			</div>
+		<div class="right">
+			<p class="top1">Take an additional</p>
+			<p class="top2">Exclusive</p>
+			<div class="top3">Sale</div>
+			<div class="top4">Instalation per window on qualifying projects</div>
+			<div class="offer">See offer <span>details</span></div>
+		</div>
+	</div>
+</div>
 <div class="wrap">
 	<div class="container">
 		<div class="row">
@@ -13,44 +31,22 @@
 				</div>
 				<div class="contentDesktopSlider">
 
-					<div class="itemBlock">
-						<div class="photo"><img src="<?php bloginfo('template_url');?>/img/home/slider/3.png" alt=""></div>
+				<?php  $slider=new WP_Query(array ('post_type'=>'OurProjects'));  ?>
+                    <?php  if ($slider->have_posts()): while($slider->have_posts()): $slider->the_post();?>
+
+                    	<div class="itemBlock">
+						<div class="photo"> <?php the_post_thumbnail();?> </div>
 						<div class="content">
 						<h3>Modern House, Washington</h3>
 						<p>Lorem Ipsum is simply dummy text  of the printing and typesetting...</p>
 						</div>
 					</div>
-
-					 <div class="itemBlock">
-						<div class="photo"><img src="<?php bloginfo('template_url');?>/img/home/slider/3.png" alt=""></div>
-						<div class="content">
-						<h3>Modern House, Washington</h3>
-						<p>Lorem Ipsum is simply dummy text </p>
-						</div>
-					</div> 
-
-
-
-
-
-					<div class="itemBlock">
-						<div class="photo"><img src="<?php bloginfo('template_url');?>/img/home/slider/3.png" alt=""></div>
-						<div class="content">
-						<h3>Modern House, Washington</h3>
-						<p>Lorem Ipsum is simply dummy text  of the printing and typesetting...</p>
-						</div>
-					</div>
-
-					 <div class="itemBlock">
-						<div class="photo"><img src="<?php bloginfo('template_url');?>/img/home/slider/3.png" alt=""></div>
-						<div class="content">
-						<h3>Modern House, Washington</h3>
-						<p>Lorem Ipsum is simply dummy text </p>
-						</div>
-					</div> 
-					
-
-
+                  <?php endwhile; ?>
+                   <?php else: ?>
+                   	<div class="itemBlock">
+                    <p> slider</p>
+                    </div>
+                   <?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -82,69 +78,67 @@
 			</div>
 
 
-			<div class="projectFront">
+
+
+
+			<?php  $slider=new WP_Query(array ('post_type'=>'Services'));  ?>
+                    <?php  if ($slider->have_posts()): while($slider->have_posts()): $slider->the_post();?>
+
+
+                 <div class="projectFront">
 				<div class="image">
 					<div class="topLine"></div>
-					<img src="<?php  bloginfo(template_url);?>/img/home/post1.png" alt="">
+					<?php the_post_thumbnail();?>
+					<a href="<?php the_permalink(); ?>">
 					<div class="backgroundPlus">
 					<img src="<?php  bloginfo(template_url);?>/img/home/plus.png" alt="" class="pls">
-					</div>
+					<!-- <div class="backpls"></div> -->
+					</div> </a>
 				</div>
 				<div class="title">
-					<p>Windows & </p>
-					<p class="color">Doors</p>
+					<a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p>
+					<p class="color"><?php the_field("color_title"); ?></p></a>
 					
 					<img src="<?php  bloginfo(template_url);?>/img/home/textDivider.png" alt="divider Title" class="dividerTitle">
 				</div>
 				<div class="content">
-					<p>Lorem Ipsum is simply dummy text  of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-					</p>
+					 <?php
+					 $string = substr(get_the_excerpt(), 0, 180);
+					 echo $string;
+					 ?>
 				</div>
-				<div class="more"><h4>Learn more</h4></div>
-			</div>
+				<div class="more"><a href="<?php the_permalink(); ?>"><h4>Learn more</h4></a></div>
+			</div>                   
+                    <?php endwhile; ?>
+                   <?php else: ?>
+                    <p> Services</p>
+                   <?php endif; ?>
 
 
-			<div class="projectFront">
-				<div class="image">
-					<div class="topLine"></div>
-					<img src="<?php  bloginfo(template_url);?>/img/home/post1.png" alt="">
-					<div class="backgroundPlus">
-					<img src="<?php  bloginfo(template_url);?>/img/home/plus.png" alt="" class="pls">
-					</div>
-				</div>
-				<div class="title">
-					<p>Windows & </p>
-					<p class="color">Doors</p>
-					
-					<img src="<?php  bloginfo(template_url);?>/img/home/textDivider.png" alt="divider Title" class="dividerTitle">
-				</div>
-				<div class="content">
-					<p>Lorem Ipsum is simply dummy text  of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-					</p>
-				</div>
-				<div class="more"><h4>Learn more</h4></div>
-			</div>
 
-			<div class="projectFront">
-				<div class="image">
-					<div class="topLine"></div>
-					<img src="<?php  bloginfo(template_url);?>/img/home/post1.png" alt="">
-					<div class="backgroundPlus">
-					<img src="<?php  bloginfo(template_url);?>/img/home/plus.png" alt="" class="pls">
-					</div>
-				</div>
-				<div class="title">
-					<p>Windows & </p>
-					<p class="color">Doors</p>
-					
-					<img src="<?php  bloginfo(template_url);?>/img/home/textDivider.png" alt="divider Title" class="dividerTitle">
-				</div>
-				<div class="content">
-					<p>Lorem Ipsum is simply dummy text  of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-					</p>
-				</div>
-				<div class="more"><h4>Learn more</h4></div>
-			</div>
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 			<div class="footerExpert footerExpertM">
 				<img src="<?php bloginfo(template_url);?>/img/home/manager-divider.png" class="divid" alt="devider">
@@ -153,7 +147,7 @@
 				</p>
 				<p class="subExpert">Upgrade your with quality windows and doors.</p>
 					<form action="">
-						<input type="text" name="" class="postCode">
+						<input type="text" name="" placeholder="50219" class="postCode">
 						<input type="submit" value="Free in-home quote" class="submitPostCode">
 						<div class="arrRight"></div>
 					</form>
@@ -173,34 +167,6 @@
 	</div>
 </div>
 
-<footer>
-	<div class="footDesk"><h4>© 2016 ONEPLUSONE All Rights Reserved.</h4></div>
-	<div class="footMob">
 
-	<div class="fingerMob">
-
-		<div class="outBlock">
-		<div class="item"><a href="" target="_blank"> <img src="<?php bloginfo(template_url); ?>/img/home/mobile-panel/letter-box.png" alt=""></a> </div>
-
-		<div class="item"><a href="" target="_blank"> <img src="<?php bloginfo(template_url); ?>/img/home/mobile-panel/mobile-point.png" alt=""> </a> </div>
-
-		<div class="item"><a href="" target="_blank"> <img src="<?php bloginfo(template_url); ?>/img/home/mobile-panel/call-in.png" alt=""> </a> </div>
-	</div>
-	<img src="<?php bloginfo(template_url); ?>/img/home/mobile-panel/finger.png" alt="">
-
-	 </div>
-	<div class="stillQuastion">
-		<h3>Still have questions?</h3>
-		<p>Ask them to us.</p>
-	</div>
-	<div class="cont">
-		<img src="<?php bloginfo(template_url);?>/img/home/logoFooter.png" alt="">
-		<p>1372 Summer st, Suite 207, Stamford, CT 06905, USA</p>
-	</div>
-	<p class="tel">+1 (203) 424-8096</p>
-	</div>
-</footer>
 
 <?php get_footer(); ?>
-</body>
-</html>

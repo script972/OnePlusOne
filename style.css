@@ -17,18 +17,72 @@ Version: 1.0
 
 
 h3 {font-family: 'Ubuntu', sans-serif; font-weight: 700; font-size: 20px; color:white; text-transform: uppercase; text-align: center;}
+h6{font-size:18px; font-family: 'Roboto', sans-serif; font-weight: 600; color: #f06724; text-transform: uppercase; }
 p{font-family: 'Ubuntu', sans-serif;  line-height: 1.5; font-size: 16px; color: black;}
 .color{color: #f06724;}
 html{margin-top: 0px !important; overflow-x:hidden;}
 body{ background: url(img/bg/bg.jpg); background-size: cover;}
 input[type=text]{height: 35px; font-family: 'Ubuntu', sans-serif; font-size: 16px; background:rgba(0,0,0,0.1); border:none; padding-left: 10px;}
-input[type=submit]{background-color: #f06724; font-family: 'Ubuntu', sans-serif; font-size: 17px; text-transform: uppercase;  border:none; height: 35px; color:white; text-align: center;  }
-
-
+input[type=submit]{background-color: #f06724;   font-family: 'Ubuntu', sans-serif; font-size: 17px; text-transform: uppercase;  border:none; height: 35px; color:white; text-align: center;  }
+.banerBack{display: none;}
 .Mainlogo{text-align: center; margin-top: 65px;}
 .Mainlogo img{ width: 90%;
     margin: auto;
     max-width: 600px;}
+.MobLogo{display: none;}
+.banerBack{background-color:rgba(0,0,0,0.3); }
+.baner { width: 80%; margin: auto; padding-top: 50px; padding-bottom: 20px;}
+.baner .left .triangel { border: 50px solid transparent; border-right: 33px solid white; float: right; }
+.baner .left{width: 45%; z-index: 3; background-color:#f8e45d; height: 215px; position: relative; left:-300px; }
+.baner .left p{font-size: 38px; font-family: 'Roboto', sans-serif;  font-weight: 600;  padding-right: 25px;
+    float: left;
+    text-align: center;
+    width: 88px;
+    margin-left: 20px; margin-top: 20px;
+    line-height: 1; margin-top: -80px; }
+.baner .right{width: 55%; z-index: 3; background-color: white; position: relative; right: -300px; height: 215px; margin: 0; margin-left: -6px; }
+.baner .left, .baner .right{display: inline-block;  vertical-align: top;     padding-left: 10px;}
+.baner .arrGetBg { margin-top: -60px; position:relative; left:-300px; z-index: 4;  width: 65%; margin-left: -10px;  height: 40px; position: absolute;}
+.baner .arrGetBg .arrGet{color: white; width: 70%; box-shadow: -1px 4px 8px rgba(0,0,0,0.5); padding-top: 5px; padding-bottom: 5px; background-color: #ef6725; font-size: 22px; padding-top: 5px; text-align: center;}
+.baner .arrGetBg .arrRight{    border: 20px solid transparent; margin-left: -5px; border-left: 10px solid #ef6725;}
+.baner .arrGetBg .arrGet, .baner .arrGetBg .arrRight{display: inline-block; vertical-align: middle;}
+.baner .right .top1 {text-align: left; font-family: 'Roboto', sans-serif;  margin-bottom: 3px; color: #ef6725; font-weight: 600; margin-top: 10px; font-size: 14px; text-transform: uppercase;}
+.baner .right .top2 {text-align: left; margin-bottom: 0; font-family: 'Roboto', sans-serif; color: black;  font-size: 18px; text-transform: uppercase;}
+.baner .right .top3 {text-align: left; line-height: 1;  font-weight: 800; font-family: 'Roboto', sans-serif; color: #ef6725;  font-size: 26px; text-transform: uppercase;}
+.baner .right .top4 {text-align: left; font-weight: 600; font-style: bold; font-family: 'Roboto', sans-serif; color: black;  font-size: 14px; padding-top: 10px; padding-right: 20px; line-height: 1; text-transform: uppercase;}
+.baner .right .offer{text-align: right; padding-right:15px; padding-top: 10px; float:right; line-height: 1;  font-weight: 800; font-style: bold; font-family: 'Roboto', sans-serif; color: #ef6725;  font-size: 20px; text-transform: uppercase;}
+.baner .right .offer span{font-size: 26px;}
+/* //baner */
+
+
+/* HEAD OTHER PAGE */
+.backGroundHeaderOtherPage #main-menu{margin-top: 0;}
+.backGroundHeaderOtherPage .opacityColorHead{background-color: rgba(0,0,0,0.5);}
+.backGroundHeaderOtherPage{background-image:url(img/bg/bg-consultation.png);     background-position: center; background-color: rgba(0,0,0,0.5); background-size: cover; margin-top: 0; }
+.backGroundHeaderOtherPage .logoMain {
+    margin-top: 75px;
+    height: 83px;
+    width: auto;
+}
+.backGroundHeaderOtherPage #main-menu{margin-top: 75px;}
+.headNumberOtherPage{float: right;}
+.headNumberOtherPage{ margin-top: 73px;}
+.headNumberOtherPage img.phoneTrub {
+    margin-top: 8px;
+}
+.headNumberOtherPage p {
+    font-size: 32px;
+    color: white;
+    letter-spacing: 2px;
+    text-align: right;
+    font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+	float: right;
+    margin-left: 5px;
+}
+
+/* ///HEAD OTHER PAGE */
+
 /* MENU */
 #main-menu{margin-top: 50px; }
 #main-menu .active {color:white; background-color: #ef6725;}
@@ -74,7 +128,7 @@ input[type=submit]{background-color: #f06724; font-family: 'Ubuntu', sans-serif;
     -moz-transition-duration: 1s;
     transition-duration: 1s;}
 .siderDesktop .contentDesktopSlider{width:70%; float:left;     height: 126px; }
-.siderDesktop .itemBlock .content {text-align: left; -webkit-transition-duration: 1s;
+.siderDesktop .itemBlock .content {text-align: left; background-color: transparent; -webkit-transition-duration: 1s;
     -o-transition-duration: 1s;
     -moz-transition-duration: 1s;
     transition-duration: 1s;   margin-left: 86px; height: 90px; color: white; width: 448px;}
@@ -115,28 +169,93 @@ input[type=submit]{background-color: #f06724; font-family: 'Ubuntu', sans-serif;
         border-left: 12px solid #f06724;
         margin-top: 7px;
         }
-
 /* BLOCK OUT */
 .projectFront {width: 255px; margin-left: 25px; float:left; margin-top: 50px; overflow: hidden; background-color: white; }
+.other .projectFront {width: 350px;}
+.other .projectFront .content{padding-right: 0;}
+.projectFront a{text-decoration: none; color:#f06724;}
+.projectFront .more a:hover h4{text-decoration: underline; transition: 0.5s;}
 .projectFront .image .topLine{width: 100%; height: 6px; background-color:#f06724;}
 .projectFront .image .backgroundPlus img {width: 30px; height: 40px;}
 .projectFront .image img {height: 200px; width: auto;}
-.projectFront .image .backgroundPlus{text-align: center; height: 40px; width: 40px; padding-top: 5px; margin-right: 10px; float:right; position:relative; margin-top: -50px; background-color: rgba(0,0,0,0.5); border-radius: 50%;}
-.projectFront .image .backgroundPlus img{ height: 30px; width: 30px; }
+.projectFront .image .backgroundPlus{text-align: center; height: 60px; width: 60px; padding-top: 5px; margin-right: 10px; float:right; position:relative; margin-top: -50px;  border-radius: 50%;}
+.projectFront .image .backgroundPlus img{ height: 30px; width: 30px; transition: 0.5s;  border-radius: 50%; }
+.projectFront .image .backgroundPlus img:hover{height: 35px; margin-top: -2px;
+    width: 35px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    border: 5px solid rgba(0,0,0,0.5);}
 .projectFront .title p {   text-transform: uppercase;  font-family: 'Roboto', sans-serif; }
+/* .projectFront .image .backgroundPlus .backpls{height: 40px;
+    width: 40px;
+    background-color: rgba(0,0,0,0.5);
+    margin-top: -35px;
+    border-radius: 50%;
+    margin-left: 10px;} */
 .projectFront .title, .projectFront .content {padding-left: 20px; padding-right: 30px;}
-.projectFront .content{padding-top: 20px;}
-.projectFront .more h4 {margin-top: 8px; margin-bottom: 23px; font-family: 'Ubuntu', sans-serif;}
+.projectFront .content{padding-top: 20px; font-family: 'Ubuntu', sans-serif; font-size: 16px;}
+.projectFront .more h4 {margin-top: 8px;     transition: 0.5s; margin-bottom: 23px; font-family: 'Ubuntu', sans-serif;}
 .projectFront .content p{line-height: 1.3; }
 .projectFront .title p {font-size:30px; font-weight: 600; margin-top: 25px; margin-bottom: 0; line-height: 1; }
-.projectFront .dividerTitle{margin-top: 17px;}
+.projectFront .dividerTitle{margin-top: 17px; width: 100%;}
 .projectFront .title .color {margin-top: 0; margin-bottom: 0;}
 .projectFront .more{float:right; padding-right: 15px;  font-size:17px; text-transform: uppercase; color:#f06724;}
+.qualityUs{max-width: 350px; margin-top: 50px; display: inline-block; margin-left: 25px; vertical-align: top;}
+.qualityUs .content { padding-left: 15px; padding-top: 11px;}
+.qualityUs .photo{text-align: center; height: 80px;     height: 100px;}
+.qualityUs h2{text-align: center; margin-top: 45px; font-family: 'Roboto', sans-serif; font-weight: 600; text-transform: uppercase; font-size: 18px;}
+.aboutSlider{ margin-top: 18px; padding-left: 20px; margin-bottom: 50px; padding-right: 20px; height: 480px; text-align: center;}
+.aboutSlider .item{margin: auto; position: relative; z-index: 1;}
+.aboutSlider .item img{margin: auto; width: auto; vertical-align:middle; position: relative; z-index: 1; }
+.aboutSlider .owl-buttons{margin-top: -368px; position: relative; z-index: 2;}
+.aboutSlider .owl-prev{transition: 0.5s; float:left; height: 100px; width: 70px; background-color: rgba(0,0,0,0.5); background-image:url(img/otherPage/sliderAbout/arrLeft.png); background-repeat: no-repeat; background-position: center; margin-left: 10px;}
+.aboutSlider .owl-next{transition: 0.5s; float:right; height: 100px; width: 70px; background-color: rgba(0,0,0,0.5); background-image:url(img/otherPage/sliderAbout/arrRight.png); background-repeat: no-repeat; background-position: center; margin-right: 10px;}
+.aboutSlider .owl-next:hover { background-color: rgba(240, 103, 36,0.5);}
+.aboutSlider .owl-prev:hover { background-color: rgba(240, 103, 36,0.5);}
+.aboutSlider .owl-page{background-image:url(img/otherPage/sliderAbout/bullet.png); width: 30px; height: 30px; background-repeat: no-repeat; background-position: center;}
+.aboutSlider .owl-page.active {background-image:url(img/otherPage/sliderAbout/bulletActive.png); width: 30px; height: 30px; background-repeat: no-repeat; background-position: center;}
+.aboutSlider .owl-page, .aboutSlider .owl-page.active{display: inline-block; margin-top: 13px; margin-bottom: 30px;}
+
+
 .sliderMob{display: none;}
+.content{background-color: white;}
+
+.content .titlePage{text-align: center; padding-top: 57px; padding-bottom: 59px;}
+.content .titlePage h1{ display: inline; font-size: 30px; letter-spacing: 10px; font-weight: 600; text-transform: uppercase;  font-family: 'Roboto', sans-serif; }
+.content .contentText {padding-bottom: 20px; padding-left: 30px; padding-right: 30px;}
+.contentFooter{background-color: #f5f4f4; }
+
+
+/* CONTACT PAGE */
+.contactUS{padding-left: 30px;}
+.contactUS input[type=text]{float:left; width: 48%; margin-right: 10px; margin-top: 10px;}
+.contactUS textarea{margin-top: 10px; width: 98%; height: 125px; font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    background: rgba(0,0,0,0.1);
+    border: none;
+    padding-left: 10px;
+    resize: none;
+}
+.contactUS form{margin-bottom: 50px; }
+.contactUS input[type=submit]{
+	width: 170px;
+	    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    margin-top: 10px;
+}
+
+.contactData{padding-left: 30px; padding-left: 120px;}
+.contactData p{padding-bottom: 5px;}
+/* ////CONTACT PAGE */
+
+/* LEARN */
+.learnBackground{margin-top: 30px; margin-bottom: 50px;}
+.learnBackground .learnMore {border: 2px solid #ef6725; transition: 0.5s; color: #ef6725; text-transform: uppercase; text-align: center; padding-top: 10px; padding-bottom: 10px; width: 135px; margin: auto;}
+/* ///LEARN */
+
 
 .footMob{display: none;}
-
-
 .footerExpertM{display: none; margin-top: 0; h300}
 .footerExpertM .divid{width: 100%; margin-top: -6px;}
 .footerExpertM {background-color:#ffd5c1; }
@@ -155,13 +274,14 @@ input[type=submit]{background-color: #f06724; font-family: 'Ubuntu', sans-serif;
         }
 footer .footMob .fingerMob{position: fixed; right: 30px; bottom: 30px;}
 footer .footMob .fingerMob img{width: 80px; height: 80px;}
-footer .footMob .outBlock{border-radius: 50px; background-color:#f06724;}
+footer .footMob .outBlock{border-radius: 50px; padding-top: 20px; padding-bottom: 20px; background-color:#f06724; display: none;}
 footer .footMob .outBlock .item{text-align: center; margin-top: 15px; margin-bottom: 15px; }
 footer .footMob .outBlock .item img {     width: 40px;
     display: block;
     padding-top: 15px;
     padding-bottom: 15px; text-align: center; margin: auto;}
 footer {margin-top: 57px;}
+footer .otherFoorPage{margin-top: 50px;}
 footer h4 {font-family: 'Ubuntu', sans-serif; color:white; font-size: 12px; text-align: center;}
 /* ///BLOCK OUT */
 /*==========  Desktop First Method  ==========*/
@@ -183,15 +303,36 @@ footer h4 {font-family: 'Ubuntu', sans-serif; color:white; font-size: 12px; text
 	.navbar-collapse{padding-left: 0; padding-right: 0;}
 	#main-menu .nav li {width: 100%; padding-top: 0;}
 	#main-menu .nav li a{height: auto; }
-	#main-menu .navbar-inverse{height: auto;}
+	#main-menu .navbar-inverse{height: auto; padding-top: 10px; padding-bottom: 10px;}
 	#main-menu .menu-liner{display: none;}
+	.headNumberOtherPage{display: none;}
+	.backGroundHeaderOtherPage .opacityColorHead .row {
+    text-align: center;
+}
+
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+	.backGroundHeaderOtherPage .logoMain {
+    margin-top: 25px;
+    width: 75%;
+    height: auto;
+}
+.backGroundHeaderOtherPage #main-menu {
+    margin-top: 25px;
+}
+
+	.navbar-inverse .navbar-collapse{margin-top: 10px;}
+	.banerBack{display: block;}
 .Mainlogo{display: none;}
+.MobLogo{display: block; padding-top: 2px;}
+.MobLogo .lineLogo {width: 55%; height: auto;}
+img.sqrLogo{margin-left: 20px;}
 #main-menu{margin-top: 0;}
+#main-menu{margin-top: -58px;}
+#main-menu .navbar-inverse{height: none;}
 .siderDesktop{display: none;}
 .wrap {background-color: white;}
 .ownerSay{display: none;}
@@ -206,7 +347,7 @@ footer h4 {font-family: 'Ubuntu', sans-serif; color:white; font-size: 12px; text
     font-size: 32px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;}
-    .footerExpertM .subExpert {
+.footerExpertM .subExpert {
     padding-left: 5px;
     padding-right: 5px;
     font-weight: 600;
@@ -230,7 +371,7 @@ footer h4 {font-family: 'Ubuntu', sans-serif; color:white; font-size: 12px; text
 footer {background-color: red; margin-top: 0; padding-top: 0; background-color: #5b5b5b;}
 footer .footDesk{display: none;}
 footer .footMob .cont{width: 80%; margin: auto; padding-top: 50px;}
-footer .footMob .cont p{color: white; width: 65%; padding-left: 15px; font-family: 'Roboto', sans-serif; font-size:16px;}
+footer .footMob .cont p{color: white; width: 62%; vertical-align: middle; padding-left: 15px; font-family: 'Roboto', sans-serif; font-size:16px;}
 footer .footMob .cont p, footer .footMob .cont img   { display: inline-block;}
 footer .footMob .tel  {font-size:32px; color:white; font-family: 'RobotoLight'; font-weight: 100; text-align: center; padding-top: 15px;}
 footer .footMob{display: block; padding-bottom: 30px;}
@@ -241,10 +382,16 @@ footer .stillQuastion p{text-align: center; color: #333333; font-size: 30px; pad
 
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 321px) {
 footer .stillQuastion h3{font-size: 24px;}
 footer .footMob .cont p{width: 50%; vertical-align: middle; }
 
+.baner .arrGetBg .arrGet {font-size: 20px;}
+.baner .left p{margin-left: 2px; font-size: 38px;}
+.baner .right .top1{font-size: 12px;}
+.baner .right .top4{font-size: 12px; }
+.baner .right .offer{font-size: 15px; padding-right: 15px; padding-top: 15px;}
+.baner .right .offer span{font-size: 19px;}
 }
 
 
