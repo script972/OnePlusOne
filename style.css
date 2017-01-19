@@ -205,7 +205,7 @@ input[type=submit]{background-color: #f06724;   font-family: 'Ubuntu', sans-seri
 .qualityUs .photo{text-align: center; height: 80px;     height: 100px;}
 .qualityUs h2{text-align: center; margin-top: 45px; font-family: 'Roboto', sans-serif; font-weight: 600; text-transform: uppercase; font-size: 18px;}
 .aboutSlider{ margin-top: 18px; padding-left: 20px; margin-bottom: 50px; padding-right: 20px; height: 480px; text-align: center;}
-.aboutSlider .item{margin: auto; position: relative; z-index: 1;}
+.aboutSlider .item{margin: auto; position: relative; z-index: 1; overflow: hidden;}
 .aboutSlider .item img{margin: auto; width: auto; vertical-align:middle; position: relative; z-index: 1; }
 .aboutSlider .owl-buttons{margin-top: -368px; position: relative; z-index: 2;}
 .aboutSlider .owl-prev{transition: 0.5s; float:left; height: 100px; width: 70px; background-color: rgba(0,0,0,0.5); background-image:url(img/otherPage/sliderAbout/arrLeft.png); background-repeat: no-repeat; background-position: center; margin-left: 10px;}
@@ -244,9 +244,19 @@ input[type=submit]{background-color: #f06724;   font-family: 'Ubuntu', sans-seri
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
     margin-top: 10px;
 }
-
-.contactData{padding-left: 30px; padding-left: 120px;}
+input[type=text].wpcf7-not-valid, input[type=email].wpcf7-not-valid, input[type=tel].wpcf7-not-valid, textarea.wpcf7-not-valid, #block-7 input[type=text].wpcf7-not-valid, #block-7 input[type=tel].wpcf7-not-valid, #block-15 input[type=tel].wpcf7-not-valid, #block-15 input[type=text].wpcf7-not-valid {
+    border: 2px solid #ec3c06;
+    z-index: 12000;
+    position: relative;
+}
+span.wpcf7-not-valid-tip{display: none !important;}
+.contactData{padding-left: 120px;}
+.contactData hr{    border-top: 3px dashed #eee;}
 .contactData p{padding-bottom: 5px;}
+.contactUsLeft .contactData{padding-left: 30px;}
+.contactUsLeft .contactData hr{ border-top: 3px dashed #eee;}
+.contactUsLeft input[type=submit]{float:right; margin-right: 15px;}
+.maps iframe{width: 100%; height: 600px; margin-bottom: 50px;}
 /* ////CONTACT PAGE */
 
 /* LEARN */
@@ -255,8 +265,24 @@ input[type=submit]{background-color: #f06724;   font-family: 'Ubuntu', sans-seri
 /* ///LEARN */
 
 
+
+
+
+
+.otherFoorPage{background: linear-gradient(45deg, black, #114580);}
+footer .container {padding-left: 3px; padding-top: 50px; padding-right: 25px; padding-bottom: 60px;}
+footer .container .footer-logo {float:left;}
+footer .container .footer-logo  .sqr-box-logo, footer .container .footer-logo  .footer-text {display: inline-block; vertical-align: bottom;}
+footer .container .footer-logo  .sqr-box-logo { width: 50px; height:50px; }
+footer .container .footer-logo  .footer-text p {font-size: 12px; font-family: 'Ubuntu', sans-serif; color:white; padding-top: 10px; }
+footer .container .footer-soc-link {float:right;}
+footer .container .footer-soc-link img {margin-right: 17px;} 
+footer .menu-image-title{display: none;}
+footer #menu-social-menu li {display: inline-block;}
+
+
 .footMob{display: none;}
-.footerExpertM{display: none; margin-top: 0; h300}
+.footerExpertM{display: none; margin-top: 0; }
 .footerExpertM .divid{width: 100%; margin-top: -6px;}
 .footerExpertM {background-color:#ffd5c1; }
 .footerExpertM p{text-align: center;}
@@ -280,8 +306,10 @@ footer .footMob .outBlock .item img {     width: 40px;
     display: block;
     padding-top: 15px;
     padding-bottom: 15px; text-align: center; margin: auto;}
-footer {margin-top: 57px;}
-footer .otherFoorPage{margin-top: 50px;}
+footer #menu-socmenu li {
+    display: inline-block;
+}
+
 footer h4 {font-family: 'Ubuntu', sans-serif; color:white; font-size: 12px; text-align: center;}
 /* ///BLOCK OUT */
 /*==========  Desktop First Method  ==========*/
@@ -289,6 +317,8 @@ footer h4 {font-family: 'Ubuntu', sans-serif; color:white; font-size: 12px; text
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 	#main-menu .nav li a{padding-left: 15px; padding-right: 15px;}
+    .aboutSlider .owl-prev{margin-left: 0;}
+    .aboutSlider .owl-next{margin-right: 0;}
 }
 
 /* Medium Devices, Desktops */
@@ -307,19 +337,34 @@ footer h4 {font-family: 'Ubuntu', sans-serif; color:white; font-size: 12px; text
 	#main-menu .menu-liner{display: none;}
 	.headNumberOtherPage{display: none;}
 	.backGroundHeaderOtherPage .opacityColorHead .row {
-    text-align: center;
-}
-
+    text-align: center;}
+    .aboutSlider{margin-bottom: 0; height: 320px;}
+    .aboutSlider .item img{max-width: 700px; height: auto;}
+    .contactUS input[type=text]{width: 100%;}
+    .contactData{padding-left: 30px;}
+    .contactUS textarea{width: 100%;}
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+img.dividerTitle{width: 100%;}
+
+
+    .contactUS {padding-right: 30px;}
+    .other .projectFront{width: 100%;}
+    .qualityUs{width: 100%; padding-left: 0;}
+    .contactUS input[type=text]{width: 100%;}
+    .projectFront .content p{padding-right: 15px;}
+
 	.backGroundHeaderOtherPage .logoMain {
     margin-top: 25px;
     width: 75%;
     height: auto;
 }
+.aboutSlider .item img{    width: 100%;
+    height: auto;}
+.aboutSlider .owl-buttons { margin-top: -250px;}
 .backGroundHeaderOtherPage #main-menu {
     margin-top: 25px;
 }

@@ -28,10 +28,20 @@
 	</div>
 	<?php } else{?>
 	<div class="otherFoorPage">
-		<div class="cont">
-		<img src="<?php bloginfo(template_url);?>/img/home/logoFooter.png" alt="">
-		<p>1372 Summer st, Suite 207, Stamford, CT 06905, USA</p>
-		</div>
+		<div class="container">
+	<div class="footer-logo">
+	<img src="<?php bloginfo('template_url'); ?>/img/home/logoFooter.png" class="sqr-box-logo" alt="sqr-box-logo">
+		<div class="footer-text"> <p>© 2016 ONEPLUSONE <br>
+			All Rights Reserved.</p></div>
+</div>
+<div class="footer-soc-link">
+	<?php 
+wp_nav_menu( array(
+	'theme_location'  => 'socmenu'
+) );
+	?>
+</div>
+</div>
 	</div>
 	<?php } ?>
 </footer>
