@@ -82,7 +82,7 @@ get_header();
                    <?php endif; ?>
 			</div>
 			<div class="row">
-		<div class="learnBackground"> <a href=""> <div class="learnMore">Learn more</div> </a> </div>
+		<div class="learnBackground"> <a href="/services/"> <div class="learnMore">Learn more</div> </a> </div>
 	</div>
 
 	</div>

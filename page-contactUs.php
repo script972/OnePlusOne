@@ -72,7 +72,7 @@ get_header();
 			</div>
 		</div>
 		<div class="row">
-			<div class="learnBackground"> <a href=""> <div class="learnMore">Learn more</div> </a> </div>
+			<div class="learnBackground"> <a href="<?php the_permalink(); ?>"> <div class="learnMore">Learn more</div> </a> </div>
 		</div>
 
 
