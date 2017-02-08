@@ -19,8 +19,85 @@
 		</div>
 	</div>
 </div>
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+  <div class="row">
+    <span class="close">x</span>
+
+    <div class="modalTitle"><h2> Your free </h2>
+    <h2 class="color"> Consultation</h2>
+    <p>Please provide the following information. A local Pella representative will contact you soon.</p> <h6 class="colorRequired">* - Required fuild </h6></div></div>
+    
+
+<!-- 
+[select State "Alabama" "Alaska" "American Samoa" "Arizona" "Arkansas" "California" "Colorado" "Connecticut" "Delaware" "District of Columbia" "Florida" "Georgia" "Guam" "Hawaii" "Idaho" "Illinois" "Indiana" "Iowa" "Kansas" "Kentucky" "Louisiana" "Maine" "Maryland" "Massachusetts" "Michigan" "Minnesota" "Mississippi" "Missouri" "Montana" "Nebraska" "Nevada" "New Hampshire" "New Jersey" "New Mexico" "New York" "North Carolina" "North Dakota" "Northern Marianas Islands" "Ohio" "Oklahoma" "Oregon" "Pennsylvania" "Puerto Rico" "Rhode Island" "South Carolina" "South Dakota" "Tennessee" "Texas" "Utah" "Vermont" "Virginia" "Virgin Islands" "Washington" "West Virginia" "Wisconsin" "Wyoming"]
+<label> Postal code   [text* address class:PostalCode] </lable>
+<label>Phone [text* phone] </label>
+<label>Email [text* email] </label>
+</div>
+<label class="setTimeDataLabel">
+   Preferred Number 
+   <input type="text" name="PreferredNumberFirst" class="setTimeData">- 
+   <input type="text" name="PreferredNumberSecond" class="setTimeData">- 
+   <input type="text" name="PreferredNumberData" class="setTimeData">
+   </label> -->
+
+
+
+
+
+ <form action="">
+  <div class="row">
+     <label>First Name <input type="text" name="FirstName"></label>
+     <label>Last Name <input type="text" name="LastName"></label>
+     <label>Address <input type="text" name="Address"></label>
+     <label>City <select name="City">
+     	<option value="Afghanistan">Afghanistan</option>
+     	<option value="Albania">Albania</option>
+     	<option value="Algeria">Algeria</option>
+     	<option value="Andorra">Andorra</option>
+     </select></label>
+     <label>State/Province <select name="stateProvince">
+  		<option value="Alabama">Alabama</option>
+  		<option value="Alaska">Alaska</option>
+  		<option value="American Samoa">American Samoa</option>
+  </select></label>
+     <label>Postal code <input type="text" placeholder="50219" name="PostCode" class="PostalCode"></label>
+     <label>Phone <input type="text" name="phone"> </label>
+     <label>Email <input type="text" name="email"></label>
+  
+     <label class="setTimeDataLabel">
+     Preferred Number 
+     <input type="text" name="PreferredNumberFirst" class="setTimeData">- 
+     <input type="text" name="PreferredNumberSecond" class="setTimeData">- 
+     <input type="text" name="PreferredNumberData" class="setTimeData">
+     </label> </div>
+     <div class="row">
+  	   <button class="ModalClose" type="reset" > Cancel</button>
+  	   <button class="ModalSubmit" type="submit">Submit</button>
+     </div>
+     </form>
+
+      <?php /* echo do_shortcode('[contact-form-7 id="85" title="Order form"]');*/ ?>
+
+   
+  </div>
+</div>
+
 <div class="wrap">
 	<div class="container">
+
+
+
+
+
+
+
+
+
+
+
 		<div class="row">
 			<div class="siderDesktop">
 			<div class="colorLine"></div>
@@ -36,9 +113,9 @@
 
                     	<div class="itemBlock">
 						<div class="photo"> <?php the_post_thumbnail();?> </div>
-						<div class="content">
-						<h3>Modern House, Washington</h3>
-						<p>Lorem Ipsum is simply dummy text  of the printing and typesetting...</p>
+						<div class="content"><a href="<?php the_permalink();?>">
+						<h3>  <?php the_title();?>  </h3> </a>
+						<p><?php echo substr(get_the_content(),0,51);?></p>
 						</div>
 					</div>
                   <?php endwhile; ?>
@@ -61,7 +138,7 @@
 				<div class="contentOwner">
 					<div class="whoIt">Owner</div>
 					<div class="photo"><img src="<?php bloginfo(template_url);?>/img/home/post0.png" alt=""></div>
-					<p>Lorem lpsum is is simply dummy text  of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy...</p>
+					<?php dynamic_sidebar('OwnerWord'); ?>
 				</div>
 				<div class="footerExpert">
 				<img src="<?php bloginfo(template_url);?>/img/home/manager-divider.png" class="divid" alt="devider">
@@ -69,11 +146,11 @@
 					TALK WITH AN <span class="color" >EXPERT</span>
 				</p>
 				<p class="subExpert">Upgrade your with quality windows and doors.</p>
-					<form action="">
-						<input type="text" name="" class="postCode">
+
+						<input type="text" name="" id="myPopUpB1" class="postCode">
 						<input type="submit" value="Free in-home quote" class="submitPostCode">
 						<div class="arrRight"></div>
-					</form>
+
 				</div>
 			</div>
 
@@ -118,28 +195,6 @@
 
 
 
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			<div class="footerExpert footerExpertM">
 				<img src="<?php bloginfo(template_url);?>/img/home/manager-divider.png" class="divid" alt="devider">
 				<p class="talkWithExpert">
@@ -147,7 +202,7 @@
 				</p>
 				<p class="subExpert">Upgrade your with quality windows and doors.</p>
 					<form action="">
-						<input type="text" name="" placeholder="50219" class="postCode">
+						<input type="text" id="myPopUpB2" name="" placeholder="50219" class="postCode">
 						<input type="submit" value="Free in-home quote" class="submitPostCode">
 						<div class="arrRight"></div>
 					</form>
@@ -157,11 +212,23 @@
 					<p class="latest">latest</p>
 					<p class="project">project</p>
 				</div>
-				<div class="itemPhoto"><img src="<?php bloginfo(template_url);?>/img/home/mob.png" alt="">	</div>
-				<div class="itemPhoto"><img src="<?php bloginfo(template_url);?>/img/home/post0.png" alt="">	</div>
-				<div class="itemPhoto"><img src="<?php bloginfo(template_url);?>/img/home/post2.png" alt="">	</div>
-				<div class="itemPhoto"><img src="<?php bloginfo(template_url);?>/img/home/post3.png" alt="">	</div>
-							
+
+
+
+
+
+<?php  $slider=new WP_Query(array ('post_type'=>'OurProjects',
+'posts_per_page'=>4));  ?>
+                    <?php  if ($slider->have_posts()): while($slider->have_posts()): $slider->the_post();?>
+                    	<div class="itemPhoto"><?php the_post_thumbnail();  ?>	</div>
+
+                  <?php endwhile; ?>
+                   <?php else: ?>
+                   	<div class="itemBlock">
+                    <p> slider</p>
+                    </div>
+                   <?php endif; ?>
+				
 			</div>
 		</div>
 	</div>

@@ -20,6 +20,7 @@ add_action('init','OurProjects');
 function OurProjects(){
     register_post_type('OurProjects', array(
         'public'=>true,
+        'taxonomies' => array('recordings', 'category', 'whatever'),
         'supports'=>array('title','thumbnail','editor','author'),
         'labels'=>array('name'=>'Our projects', 
             'add_new'=>'Add projects')
@@ -46,4 +47,40 @@ function AboutSlider(){
             'add_new'=>'Add slide')
         ));
 }
+
+add_action('init','testimonials');
+function testimonials(){
+    register_post_type('testimonials', array(
+        'public'=>true,
+        'supports'=>array('title','thumbnail','editor'),
+        'labels'=>array('name'=>'Testimonials', 
+            'add_new'=>'Add testimonial')
+        ));
+}
+
+
+
+/*WIDGETS*/
+function arphabet_widgets_init() {
+
+    register_sidebar( array(
+        'name'          => 'copyRight',
+        'id'            => 'copyRight',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<p>',
+        'after_title'   => '</p>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => 'OwnerWord',
+        'id'            => 'OwnerWord',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<p>',
+        'after_title'   => '</p>',
+    ) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
 ?>

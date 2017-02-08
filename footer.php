@@ -1,6 +1,6 @@
 <footer>
 <?php if(is_home()){ ?>
-	<div class="footDesk"><h4>© 2016 ONEPLUSONE All Rights Reserved.</h4></div>
+	<div class="footDesk"><h4><?php dynamic_sidebar('copyRight'); ?></h4></div>
 	<div class="footMob">
 
 	<div class="fingerMob">
@@ -31,8 +31,7 @@
 		<div class="container">
 	<div class="footer-logo">
 	<img src="<?php bloginfo('template_url'); ?>/img/home/logoFooter.png" class="sqr-box-logo" alt="sqr-box-logo">
-		<div class="footer-text"> <p>© 2016 ONEPLUSONE <br>
-			All Rights Reserved.</p></div>
+		<div class="footer-text"> <p><?php dynamic_sidebar('copyRight'); ?></p></div>
 </div>
 <div class="footer-soc-link">
 	<?php 

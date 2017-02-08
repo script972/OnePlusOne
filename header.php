@@ -24,11 +24,13 @@
 <header>
 
 <?php if(is_home()){ ?>
+<a href="<?php home_url(); ?>">
 <div class="Mainlogo">
 <img src="<?php bloginfo(template_url);?>/img/logo/mainLogo.png" alt=""></div>
 <div class="MobLogo"><img class="sqrLogo" src="<?php bloginfo(template_url);?>/img/home/sqrLogo.png" alt="" >
 <img class="lineLogo" src="<?php bloginfo(template_url);?>/img/home/lineLogo.png" alt="" >
 </div>
+</a>
 <div id="main-menu">
   <nav class="navbar-inverse navbar-fixed" >
          <div class="container-menu">
@@ -60,8 +62,8 @@ wp_nav_menu( array(
 <div class="backGroundHeaderOtherPage">
 <div class="opacityColorHead">
 <div class="container">
-<div class="row">
-<img src="<?php bloginfo(template_url);?>/img/logo/mainLogo.png" alt="Logo" class="logoMain">
+<div class="row"> <a href="<?php home_url(); ?>">
+<img src="<?php bloginfo(template_url);?>/img/logo/mainLogo.png" alt="Logo" class="logoMain"> </a>
 <div class="headNumberOtherPage"><img src="<?php bloginfo(template_url);?>/img/logo/phone.png" alt="" class="phoneTrub"><p>+1 (203) 424-8096</p></div> </div> </div>
   <div id="main-menu">
   <nav class="navbar-inverse navbar-fixed" >

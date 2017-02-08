@@ -89,7 +89,7 @@ get_header();
 </div>
 
 
-<?php  $slider=new WP_Query(array ('pagename'=>'Contact us'));  ?>
+<?php  $slider=new WP_Query(array ('pagename'=>'contactUs'));  ?>
                     <?php $slider->the_post();?>
 
 <div class="content other contentFooter">
@@ -101,15 +101,8 @@ get_header();
 		<div class="row">
 			<div class="contactUS col-md-6">
 			<h6>Request a consultation</h6>
-			<?php echo do_shortcode('[contact-form-7 id="77" title="Contact form 1"]'); ?>
-			<!-- <form action="">
-				<input type="text" name="firstName">
-				<input type="text" name="lastName">
-				<input type="text" name="phoneNumber">
-				<input type="text" name="emailAddress">
-				<textarea name="message" class="message" ></textarea>
-				<input type="submit">
-			</form> -->
+			<?php echo do_shortcode('[contact-form-7 id="207" title="Contact Us"]'); ?>
+	
 			</div>
 
 			<div class="contactData col-md-6">
