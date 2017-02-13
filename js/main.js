@@ -28,11 +28,13 @@ $(document).ready(function(){
 
 /*pupUP*/
  $(document).ready(function(){
+
       var modal = document.getElementById('myModal');
 
+      
       // Get the button that opens the modal
       var btn = document.getElementById("myPopUpB1");
-
+if(btn){
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close");
 
@@ -54,7 +56,7 @@ $(document).ready(function(){
       }
       $(".close").click(function(){$(modal).fadeOut();});
       $(".ModalClose").click(function(){$(modal).fadeOut();});
-
+}
 
 
       /*///PupUpMobile*/
@@ -62,9 +64,10 @@ $(document).ready(function(){
 
       // Get the button that opens the modal
       var btn = document.getElementById("myPopUpB2");
-
+if(btn){
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
+
 
       // When the user clicks the button, open the modal
       btn.onclick = function() {
@@ -82,9 +85,11 @@ $(document).ready(function(){
               modal.style.display = "none";
           }
       }
+    }
+
 });
 
- 
+
 
 
    $(document).ready(function(){
@@ -262,6 +267,23 @@ $(document).ready(function(){
 
 
  /*SHOW MORE GRID BLOCK*/
+
+
+
+$(document).ready(function(){
+$(".pls").hover(function(){
+  $(this).parent(".backgroundPlus").parent("a").parent(".image").children("img").css("width","400px");
+  $(this).parent(".backgroundPlus").parent("a").parent(".image").children("img").css("margin-left","0px");
+}, function(){
+  $(this).parent(".backgroundPlus").parent("a").parent(".image").children("img").css("width","350px");
+  $(this).parent(".backgroundPlus").parent("a").parent(".image").children("img").css("morgin","auto");
+
+}
+);
+
+});
+
+
 $(document).ready(function(){
 /*TAB1*/
 let data1 = Array.from(document.querySelectorAll('#tab1 .row .slide-box')),

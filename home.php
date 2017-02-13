@@ -47,39 +47,40 @@
 
 
 
- <form action="">
-  <div class="row">
-     <label>First Name <input type="text" name="FirstName"></label>
-     <label>Last Name <input type="text" name="LastName"></label>
-     <label>Address <input type="text" name="Address"></label>
-     <label>City <select name="City">
-     	<option value="Afghanistan">Afghanistan</option>
-     	<option value="Albania">Albania</option>
-     	<option value="Algeria">Algeria</option>
-     	<option value="Andorra">Andorra</option>
-     </select></label>
-     <label>State/Province <select name="stateProvince">
-  		<option value="Alabama">Alabama</option>
-  		<option value="Alaska">Alaska</option>
-  		<option value="American Samoa">American Samoa</option>
-  </select></label>
-     <label>Postal code <input type="text" placeholder="50219" name="PostCode" class="PostalCode"></label>
-     <label>Phone <input type="text" name="phone"> </label>
-     <label>Email <input type="text" name="email"></label>
-  
-     <label class="setTimeDataLabel">
-     Preferred Number 
-     <input type="text" name="PreferredNumberFirst" class="setTimeData">- 
-     <input type="text" name="PreferredNumberSecond" class="setTimeData">- 
-     <input type="text" name="PreferredNumberData" class="setTimeData">
-     </label> </div>
-     <div class="row">
-  	   <button class="ModalClose" type="reset" > Cancel</button>
-  	   <button class="ModalSubmit" type="submit">Submit</button>
-     </div>
-     </form>
+<!--  <form action="">
+ <div class="row">
+    <label>First Name <input type="text" name="FirstName"></label>
+    <label>Last Name <input type="text" name="LastName"></label>
+    <label>Address <input type="text" name="Address"></label>
+    <label>City <select name="City">
+    	<option value="Afghanistan">Afghanistan</option>
+    	<option value="Albania">Albania</option>
+    	<option value="Algeria">Algeria</option>
+    	<option value="Andorra">Andorra</option>
+    </select></label>
+    <label>State/Province <select name="stateProvince">
+ 		<option value="Alabama">Alabama</option>
+ 		<option value="Alaska">Alaska</option>
+ 		<option value="American Samoa">American Samoa</option>
+ </select></label>
+    <label>Postal code <input type="text" placeholder="50219" name="PostCode" class="PostalCode"></label>
+    <label>Phone <input type="text" name="phone"> </label>
+    <label>Email <input type="text" name="email"></label>
+ 
+    <label class="setTimeDataLabel">
+    Preferred Number 
+    <input type="text" name="PreferredNumberFirst" class="setTimeData">- 
+    <input type="text" name="PreferredNumberSecond" class="setTimeData">- 
+    <input type="text" name="PreferredNumberData" class="setTimeData">
+    </label> </div>
+    <div class="row">
+ 	   <button class="ModalClose" type="reset" > Cancel</button>
+ 	   <button class="ModalSubmit" type="submit">Submit</button>
+    </div>
+    </form> -->
 
-      <?php /* echo do_shortcode('[contact-form-7 id="85" title="Order form"]');*/ ?>
+      <?php  echo do_shortcode('[contact-form-7 id="85" title="Order form"]'); ?>
+      
 
    
   </div>
@@ -147,8 +148,8 @@
 				</p>
 				<p class="subExpert">Upgrade your with quality windows and doors.</p>
 
-						<input type="text" name="" id="myPopUpB1" class="postCode">
-						<input type="submit" value="Free in-home quote" class="submitPostCode">
+						<input type="text" name=""  class="postCode">
+						<input type="submit" id="myPopUpB1" value="Free in-home quote" class="submitPostCode">
 						<div class="arrRight"></div>
 
 				</div>
@@ -201,11 +202,11 @@
 					TALK WITH AN <span class="color" >EXPERT</span>
 				</p>
 				<p class="subExpert">Upgrade your with quality windows and doors.</p>
-					<form action="">
-						<input type="text" id="myPopUpB2" name="" placeholder="50219" class="postCode">
-						<input type="submit" value="Free in-home quote" class="submitPostCode">
+					<div class="forms">
+						<input type="text" name="" placeholder="50219" class="postCode">
+						<input type="submit"  id="myPopUpB2" value="Free in-home quote" class="submitPostCode">
 						<div class="arrRight"></div>
-					</form>
+					</div>
 			</div>
 			<div class="sliderMob">
 				<div class="namedSlider">
