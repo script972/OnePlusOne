@@ -47,7 +47,7 @@ get_header();
 	</div>
 </div>
 
-<?php  $slider=new WP_Query(array ('pagename'=>'OurProjects'));  ?>
+<?php  $slider=new WP_Query(array ('pagename'=>'services'));  ?>
                     <?php $slider->the_post();?>
 
 <div class="content other contentFooter">
@@ -65,16 +65,17 @@ get_header();
 					<?php  $slider=new WP_Query(array ('post_type'=>'Services'));  ?>
                     <?php  if ($slider->have_posts()): while($slider->have_posts()): $slider->the_post();?>
 
-                 <div class="projectFront">
+                     <div class="projectFront">
+                 <div class="divWithLine">
+                 <div class="topLine"></div>
 				<div class="image">
-					<div class="topLine"></div>
-					<?php the_post_thumbnail();?>
-					<a href="<?php the_permalink(); ?>">
-					<div class="backgroundPlus">
 					
-					<!-- <div class="backpls"></div> -->
-					</div> </a>
+					<?php the_post_thumbnail();?>
+			
 				</div>
+				</div>
+
+
 				<div class="title">
 					<a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p>
 					<p class="color"><?php the_field("color_title"); ?></p></a>

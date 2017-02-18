@@ -18,13 +18,21 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/owl.carousel.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
 
+
+
+
+<script src="<?php bloginfo('template_url'); ?>/js/smooth/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/smooth/jquery.mousewheel.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/smooth/jquery.kinetic.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/smooth/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
+
   <?php wp_head(); ?>
 </head>
 <body>
 <header>
 
 <?php if(is_home()){ ?>
-<a href="<?php home_url(); ?>">
+<a href="<?php echo home_url(); ?>">
 <div class="Mainlogo">
 <img src="<?php bloginfo(template_url);?>/img/logo/mainLogo.png" alt=""></div>
 <div class="MobLogo"><img class="sqrLogo" src="<?php bloginfo(template_url);?>/img/home/sqrLogo.png" alt="" >
@@ -62,7 +70,7 @@ wp_nav_menu( array(
 <div class="backGroundHeaderOtherPage">
 <div class="opacityColorHead">
 <div class="container">
-<div class="row"> <a href="<?php home_url(); ?>">
+<div class="row"> <a href="<?php echo home_url(); ?>">
 <img src="<?php bloginfo(template_url);?>/img/logo/mainLogo.png" alt="Logo" class="logoMain"> </a>
 <div class="headNumberOtherPage"><img src="<?php bloginfo(template_url);?>/img/logo/phone.png" alt="" class="phoneTrub"><p>+1 (203) 424-8096</p></div> </div> </div>
   <div id="main-menu">

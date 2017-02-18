@@ -64,7 +64,17 @@ get_header();
 		<?php  $slider=new WP_Query(array ('post_type'=>'Services'));  ?>
                     <?php  if ($slider->have_posts()): while($slider->have_posts()): $slider->the_post();?>
 
-                 <div class="projectFront">
+                    <div class="projectFront">
+                 <div class="divWithLine">
+                 <div class="topLine"></div>
+				<div class="image">
+					
+					<?php the_post_thumbnail();?>
+			
+				</div>
+				</div>
+
+
 				<div class="title">
 					<a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p>
 					<p class="color"><?php the_field("color_title"); ?></p></a>
@@ -72,9 +82,12 @@ get_header();
 					<img src="<?php  bloginfo(template_url);?>/img/home/textDivider.png" alt="divider Title" class="dividerTitle">
 				</div>
 				<div class="content">
-					 <?php the_excerpt(); ?>
+					 <?php
+					 
+					 echo get_the_excerpt();
+					 ?>
 				</div>
-			
+				
 			</div>                   
                     <?php endwhile; ?>
                    <?php else: ?>

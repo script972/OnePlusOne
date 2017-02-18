@@ -80,7 +80,7 @@
     </form> -->
 
       <?php  echo do_shortcode('[contact-form-7 id="85" title="Order form"]'); ?>
-      
+
 
    
   </div>
@@ -107,9 +107,11 @@
 					<p class="latest">latest</p>
 					<p class="project">project</p>
 				</div>
+			
 				<div class="contentDesktopSlider">
 
 				<?php  $slider=new WP_Query(array ('post_type'=>'OurProjects'));  ?>
+
                     <?php  if ($slider->have_posts()): while($slider->have_posts()): $slider->the_post();?>
 
                     	<div class="itemBlock">
@@ -126,6 +128,8 @@
                     </div>
                    <?php endif; ?>
 				</div>
+				
+
 			</div>
 		</div>
 	</div>
@@ -164,15 +168,16 @@
 
 
                  <div class="projectFront">
+                 <div class="divWithLine">
+                 <div class="topLine"></div>
 				<div class="image">
-					<div class="topLine"></div>
+					
 					<?php the_post_thumbnail();?>
-					<a href="<?php the_permalink(); ?>">
-					<div class="backgroundPlus">
-					<img src="<?php  bloginfo(template_url);?>/img/home/plus.png" alt="" class="pls">
-					<!-- <div class="backpls"></div> -->
-					</div> </a>
+			
 				</div>
+				</div>
+
+
 				<div class="title">
 					<a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p>
 					<p class="color"><?php the_field("color_title"); ?></p></a>

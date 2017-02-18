@@ -122,7 +122,19 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
- jQuery(".contentDesktopSlider").owlCarousel({
+  $(".contentDesktopSlider").smoothDivScroll({
+    
+      mousewheelScrolling: "allDirections",
+      manualContinuousScrolling: true, //Бесконечный цикл
+      touchScrolling:true,
+      visibleHotSpotBackgrounds:"always",
+      autoScrollingMode: "onStart",
+      hotSpotMouseDownSpeedBooster: 1,
+      hotSpotScrollingStep: 1,
+      hotSpotScrollingInterval: 300
+
+    }); 
+/* jQuery(".contentDesktopSlider").owlCarousel({
       navigation : true, // показывать кнопки next и prev 
       slideSpeed : 100,
       paginationSpeed : 100,
@@ -140,7 +152,8 @@ $(document).ready(function(){
     touchDrag:true,
     nav:true,
     navText:''
-  });
+  });*/
+
  $(".siderDesktop .contentDesktopSlider .itemBlock .photo").click(function(){
   /*Change background color*/
 var srcImgBack = ($(this).children("img").attr("src"));
@@ -175,7 +188,7 @@ jQuery(".itemBlock .content").css("display", "none");
 $(document).ready(function(){
  jQuery(".aboutSlider").owlCarousel({
       navigation : true, // показывать кнопки next и prev 
-      slideSpeed : 100,
+      slideSpeed : 800,
       paginationSpeed : 100,
       dots: true,
       loop:true,
@@ -184,11 +197,12 @@ $(document).ready(function(){
       itemsDesktopSmall : false,
       itemsTablet: false,
       itemsMobile : false,
-      autoplay:false, //Автозапуск слайдера
-    smartSpeed:1000, //Время движения слайда
-    autoplayTimeout:2000, //Время смены слайда
     autoplayHoverPause: true,
     touchDrag:true,
+     autoPlay: true, //Автозапуск слайдера
+    smartSpeed:5000, //Время движения слайда
+    autoplayTimeout:4000, //Время смены слайда
+    autoplayHoverPause: true,
     nav:true,
     navText:''
   });
@@ -208,12 +222,14 @@ $(document).ready(function(){
       itemsDesktopSmall : false,
       itemsTablet: false,
       itemsMobile : true,
-      autoplay:false, //Автозапуск слайдера
-    smartSpeed:1000, //Время движения слайда
-    autoplayTimeout:2000, //Время смены слайда
+
     autoplayHoverPause: true,
     touchDrag:true,
     nav:true,
+   autoPlay: true, //Автозапуск слайдера
+    smartSpeed:1000, //Время движения слайда
+    autoplayTimeout:2000, //Время смены слайда
+    autoplayHoverPause: true,
     navText:''
   });
  $(".testimonials-slider .owl-prev").empty();
@@ -231,13 +247,28 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.learnMore').hover(
   function(){
-    $('.learnMore').css('background','#f06724');
-    $('.learnMore').css('color','white');
+    $(this).css('background','#f06724');
+    $(this).css('color','white');
 }, function(){
-  $('.learnMore').css('background','white');
-    $('.learnMore').css('color','#f06724');
+  $(this).css('background','transparent');
+    $(this).css('color','#f06724');
 })
 });
+
+$(document).ready(function(){
+  $('.contactUS input[type=submit]').hover(
+  function(){
+    $(this).css('background','transparent');
+    $(this).css('color','#f06724');
+    $(this).css('border','1px solid #f06724');
+}, function(){
+  $(this).css('background','#f06724');
+    $(this).css('color','white');
+})
+});
+
+
+
 
 
   jQuery(document).ready(function() {
@@ -270,18 +301,6 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
-$(".pls").hover(function(){
-  $(this).parent(".backgroundPlus").parent("a").parent(".image").children("img").css("width","400px");
-  $(this).parent(".backgroundPlus").parent("a").parent(".image").children("img").css("margin-left","0px");
-}, function(){
-  $(this).parent(".backgroundPlus").parent("a").parent(".image").children("img").css("width","350px");
-  $(this).parent(".backgroundPlus").parent("a").parent(".image").children("img").css("morgin","auto");
-
-}
-);
-
-});
 
 
 $(document).ready(function(){
