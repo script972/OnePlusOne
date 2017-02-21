@@ -179,9 +179,53 @@ input[type=submit]{background-color: #f06724;   font-family: 'Ubuntu', sans-seri
 .ownerSay .divid{ width: 317px;  padding-left: 0px; margin-left: -30px; margin-top: -16px;}
 .ownerSay .subExpert{font-style: italic; font-size: 16px;}
 .ownerSay .postCode {width: 100%; }
-.ownerSay .submitPostCode {width: 95%; margin-top: 7px; height: 40px; margin-left: 0; padding-left: 0; box-shadow: 1px 5px 10px rgba(0,0,0,0.5); }
+.ownerSay .submitPostCode {width: 100%; text-transform: uppercase; transition: 0.5s; margin-top: 7px; height: 42px; margin-left: 0; padding-left: 0; }
 .ownerSay .submitPostCode:hover{/* text-decoration:underline; */}
 .ownerSay form{text-align: left;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* стиль кнопки на основе кнопок из Twitter Bootstrap */
+.submitPostCode {
+    text-transform: uppercase;
+  display: block;
+  color: #fff;
+  border-radius: 0em; /* Обнулить округлости */
+  -moz-border-radius: 0em; /* Обнулить округлости */
+  -webkit-border-radius: 0em; /* Обнулить округлости */
+  background: #f06724;
+  border: none;
+  position: relative;
+  margin: 0 auto; /* Это просто для выравнивания кнопки посередине */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .ownerSay form input[type=text]{margin-top: 4px;  }
 .ownerSay .arrRight, .ownerSay .submitPostCode{float:left;}
 .ownerSay .arrRight{
@@ -282,6 +326,9 @@ input[type=submit]{background-color: #f06724;   font-family: 'Ubuntu', sans-seri
 #testimonials-slider .owl-pagination{text-align: center; margin-top: 50px;}
 #testimonials-slider .owl-page{display: inline-block;}
 /* /////Testimonials */
+
+
+
 
 
 
@@ -443,11 +490,23 @@ span.wpcf7-not-valid-tip{display: none !important;}
 
 
 /* /////////////MODAL */
-.other .submitPostCode{width: 255px; margin-top: 10px; margin-bottom: 50px;}
+.other .submitPostCode{width: 255px; transition: 0.5s; margin-top: 10px; margin-bottom: 50px;}
 .other .postCode{width: 255px;}
 
 
 
+
+
+
+
+/* DIVIDER LINE */
+.dividerTitleTalkWithExpert{width: 515px; height: 10px;}
+.dividerTitleTestimonials{width: 330px; height: 10px;}
+.dividerTitleAbout{width: 160px; height: 10px;}
+.dividerTitleOurServices{width: 320px; height: 10px;}
+.dividerTitleContactUs{width: 290px; height: 10px;}
+.dividerTitleOurProjects{width: 340px; height: 10px;}
+/* ////DIVIDER LINE */
 
 /*----- Tabs -----*/
 .rowZ{margin: 0px; padding:0px;}
@@ -574,6 +633,10 @@ footer h4 {font-family: 'Ubuntu', sans-serif; color:white; font-size: 12px; text
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    .projectFront .image img{margin-top: -1px;}
+    .other .projectFront { width: 330px;}
+    .siderDesktop{display: none;}
+    .qualityUs{width: 330px;}
 	.navbar-collapse{padding-left: 0; padding-right: 0;}
 	#main-menu .nav li {width: 100%; padding-top: 0;}
 	#main-menu .nav li a{height: auto; }
@@ -733,4 +796,6 @@ footer .footMob .cont p{width: 50%; vertical-align: middle; }
 @media only screen and (min-width : 1200px) {
 
 }
+
+
 

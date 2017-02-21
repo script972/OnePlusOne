@@ -260,12 +260,30 @@ $(document).ready(function(){
   function(){
     $(this).css('background','transparent');
     $(this).css('color','#f06724');
-    $(this).css('border','1px solid #f06724');
+    $(this).css('border','2px solid #f06724');
 }, function(){
   $(this).css('background','#f06724');
     $(this).css('color','white');
 })
 });
+
+
+
+$(document).ready(function(){
+  $('.submitPostCode').hover(
+  function(){
+    $(this).css('background','transparent');
+    $(this).css('color','#f06724');
+    $(this).css('border','2px solid #f06724');
+}, function(){
+  $(this).css('background','#f06724');
+    $(this).css('color','white');
+})
+});
+
+
+
+
 
 
 

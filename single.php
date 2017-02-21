@@ -72,7 +72,7 @@ get_header();
 <div class="content other">
     <div class="container">
         <div class="row">
-            <div class="titlePage"><h1><?php the_title();?> <?php the_field("color_title"); ?></h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="dividerTitle"> 
+            <div class="titlePage"><h1><?php the_title();?> <?php the_field("color_title"); ?></h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="  dividerTitle"> 
             </div>
         </div>
         <div class="row">
@@ -81,7 +81,7 @@ get_header();
             </div>
         </div>
         <div class="row">
-            <div class="titlePage"><h1> TALK WITH AN EXPERT</h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="dividerTitle"> 
+            <div class="titlePage"><h1> TALK WITH AN EXPERT</h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="dividerTitle dividerTitleTalkWithExpert"> 
             </div>
         </div>
         <div class="row">
@@ -105,7 +105,7 @@ get_header();
 <div class="content other contentFooter">
     <div class="container">
         <div class="row">
-            <div class="titlePage"><h1><?php the_title();?> </h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="dividerTitle"> 
+            <div class="titlePage"><h1><?php the_title();?> </h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="dividerTitle dividerTitleTestimonials"> 
             </div>
         </div>
         

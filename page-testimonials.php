@@ -10,7 +10,7 @@ get_header();
 <div class="content other">
 	<div class="container">
 		<div class="row">
-			<div class="titlePage"><h1><?php the_title();?></h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="dividerTitle"> 
+			<div class="titlePage"><h1><?php the_title();?></h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="dividerTitle dividerTitleTestimonials"> 
 			</div>
 		</div>
 		<div class="row">
@@ -53,7 +53,7 @@ get_header();
 <div class="content other contentFooter">
 	<div class="container">
 		<div class="row">
-			<div class="titlePage"><h1><?php the_title();?></h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="dividerTitle"> 
+			<div class="titlePage"><h1><?php the_title();?></h1><br> <img src="<?php bloginfo(template_url);?>/img/home/botLineWhite.png" alt="Divider" class="dividerTitle dividerTitleOurServices"> 
 			</div>
 		</div>
 		<div class="row">

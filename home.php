@@ -153,8 +153,11 @@
 				<p class="subExpert">Upgrade your with quality windows and doors.</p>
 
 						<input type="text" name=""  class="postCode">
-						<input type="submit" id="myPopUpB1" value="Free in-home quote" class="submitPostCode">
-						<div class="arrRight"></div>
+			
+
+						<button id="myPopUpB1" class="submitPostCode ">Free in-home quote</button>
+
+					
 
 				</div>
 			</div>
