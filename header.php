@@ -21,10 +21,9 @@
 
 
 
-<script src="<?php bloginfo('template_url'); ?>/js/smooth/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/smooth/jquery.mousewheel.min.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/smooth/jquery.kinetic.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/smooth/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/slider.js"></script>
+
 
   <?php wp_head(); ?>
 </head>

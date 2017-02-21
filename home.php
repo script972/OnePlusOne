@@ -99,38 +99,62 @@
 
 
 
-		<div class="row">
-			<div class="siderDesktop">
-			<div class="colorLine"></div>
-			<div class="uncolorLine"></div>
-				<div class="namedSlider">
-					<p class="latest">latest</p>
-					<p class="project">project</p>
-				</div>
-			
-				<div class="contentDesktopSlider">
+	
 
-				<?php  $slider=new WP_Query(array ('post_type'=>'OurProjects'));  ?>
 
-                    <?php  if ($slider->have_posts()): while($slider->have_posts()): $slider->the_post();?>
 
-                    	<div class="itemBlock">
-						<div class="photo"> <?php the_post_thumbnail();?> </div>
-						<div class="content"><a href="<?php the_permalink();?>">
-						<h3>  <?php the_title();?>  </h3> </a>
-						<p><?php echo substr(get_the_content(),0,51);?></p>
-						</div>
-					</div>
-                  <?php endwhile; ?>
-                   <?php else: ?>
-                   	<div class="itemBlock">
-                    <p> slider</p>
-                    </div>
-                   <?php endif; ?>
-				</div>
-				
 
-			</div>
+
+
+
+
+
+
+
+		<div class="siderDesktop">
+<div class="colorLine"></div>
+<div class="uncolorLine"></div>
+	<div class="namedSlider">
+		<p class="latest">latest</p>
+		<p class="project">project</p>
+	</div>
+	 <div class="contentDesktopSlider">
+	     <div class="slider">
+            <div class="left_arrow"></div>
+            <div class="slide_zone">
+            <?php  $slider=new WP_Query(array ('post_type'=>'OurProjects'));  ?>
+	
+	                    <?php  if ($slider->have_posts()):  $i=1; while($slider->have_posts()): $slider->the_post();?> 
+	                    	<div class="slide_item " id="<?php echo $i;?>">
+			                <div class="slide_img">
+			                 <?php the_post_thumbnail();?>
+			                </div>
+			                <div class="slide_content ">
+			                  <h1 class="cont_head"> <a href="<?php the_permalink();?>"> <?php the_title(); ?> </a></h1>
+			                  <h2 class="cont_text" > <?php echo substr(get_the_content(),0,51);?> </h2>
+			                </div>
+			              </div>
+			              <?php $i++; ?>
+ 	                    	<?php endwhile; ?>
+	                   <?php else: ?>
+	                   	<div class="slide_item">
+	                    <p> slider our Projects</p>
+	                    </div>
+	                   <?php endif; ?>
+
+
+              
+              
+            </div>
+            <div class="right_arrow"></div>
+          </div>
+
+          </div>
+
+	
+	
+
+</div> 
 		</div>
 	</div>
 	<div class="container">
@@ -152,7 +176,7 @@
 				</p>
 				<p class="subExpert">Upgrade your with quality windows and doors.</p>
 
-						<input type="text" name=""  class="postCode">
+						<input type="text" name="" value="Your zip or postal code..." class="postCode">
 			
 
 						<button id="myPopUpB1" class="submitPostCode ">Free in-home quote</button>
@@ -211,7 +235,7 @@
 				</p>
 				<p class="subExpert">Upgrade your with quality windows and doors.</p>
 					<div class="forms">
-						<input type="text" name="" placeholder="50219" class="postCode">
+						<input type="text" name="" value="Your zip or postal code..." placeholder="50219" class="postCode">
 						<input type="submit"  id="myPopUpB2" value="Free in-home quote" class="submitPostCode">
 						<div class="arrRight"></div>
 					</div>

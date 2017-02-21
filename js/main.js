@@ -121,65 +121,6 @@ $(document).ready(function(){
 });
 
 
-$(document).ready(function(){
-  $(".contentDesktopSlider").smoothDivScroll({
-    
-      mousewheelScrolling: "allDirections",
-      manualContinuousScrolling: true, //Бесконечный цикл
-      touchScrolling:true,
-      visibleHotSpotBackgrounds:"always",
-      autoScrollingMode: "onStart",
-      hotSpotMouseDownSpeedBooster: 1,
-      hotSpotScrollingStep: 1,
-      hotSpotScrollingInterval: 300
-
-    }); 
-/* jQuery(".contentDesktopSlider").owlCarousel({
-      navigation : true, // показывать кнопки next и prev 
-      slideSpeed : 100,
-      paginationSpeed : 100,
-      dots: true,
-      loop:true,
-      items : 2, 
-      itemsDesktop : false,
-      itemsDesktopSmall : false,
-      itemsTablet: false,
-      itemsMobile : false,
-      autoplay:false, //Автозапуск слайдера
-    smartSpeed:1000, //Время движения слайда
-    autoplayTimeout:2000, //Время смены слайда
-    autoplayHoverPause: true,
-    touchDrag:true,
-    nav:true,
-    navText:''
-  });*/
-
- $(".siderDesktop .contentDesktopSlider .itemBlock .photo").click(function(){
-  /*Change background color*/
-var srcImgBack = ($(this).children("img").attr("src"));
-$('body').css('background-image', 'url(' + srcImgBack + ')');
-/*OR*/
-
-/*$('body')
-    .animate({opacity: 0}, 'slow', function() {
-        $(this)
-            .css({'background-image': 'url(' + srcImgBack + ')'})
-            .animate({opacity: 1});
-    });*/
-/*/////*/
-
-});
- $(".siderDesktop .owl-prev").empty();
- $(".siderDesktop .owl-next").empty();
-jQuery(".itemBlock .content").css("display", "none");
- $(".siderDesktop .itemBlock .content").first().fadeIn("400");
-jQuery(".itemBlock .photo img").click(function(){
-jQuery(".itemBlock .content").css("display", "none");
-  jQuery(this).parent(".photo").parent(".itemBlock").children(".content").fadeIn("400");
-});
-
-
-});
 
 
 

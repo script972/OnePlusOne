@@ -128,6 +128,9 @@ input[type=submit]{background-color: #f06724;   font-family: 'Ubuntu', sans-seri
 }
 .wrap{margin-bottom: 30px;}
 /* ///MENU */
+
+
+/* SLIDR DESKTOP */
 .siderDesktop{margin-top: 50px; background: rgba(0,0,0,0.8); height: 130px;    margin-left: 5px;}
 .siderDesktop .colorLine{width: 50%;  height: 4px; background-color:#f06724; float:left; }
 .siderDesktop .uncolorLine {width: 50%; height: 4px; color: white; background: rgba(155, 164, 169, 0.8); float:left; }
@@ -139,29 +142,127 @@ input[type=submit]{background-color: #f06724;   font-family: 'Ubuntu', sans-seri
     -o-transition-duration: 1s;
     -moz-transition-duration: 1s;
     transition-duration: 1s;}
-.siderDesktop .contentDesktopSlider{width:80%; float:left; height: 120px; }
-.siderDesktop .itemBlock .content {text-align: left; background-color: transparent; -webkit-transition-duration: 1s;
-    -o-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    transition-duration: 1s;   margin-left: 86px; height: 90px; color: white; width: 448px;}
-.siderDesktop .itemBlock .content p{color:white;}
-.siderDesktop .itemBlock .content h3{ text-align: left; margin-top: 0;     margin-top: -4px; }
-.siderDesktop .photo {height: 65px; width: 65px; overflow: hidden; float: left;}
-.siderDesktop .photo img{height: 65px; width: auto;}
-.siderDesktop .owl-buttons{margin-top: -92px;}
-.siderDesktop .owl-prev{background-image: url(img/home/slider/arrLeft.png); width: 24px; height: 68px;     margin-top: 5px;
-    margin-left: 25px; }
+.siderDesktop .contentDesktopSlider{ float:left; height: 120px; }
+.slider_block{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
-.scrollingHotSpotRight{background-image: url(img/home/slider/arrRight.png); margin-top: 25px; width: 24px;     margin-right:35px; height: 68px; float: right; }
-.scrollingHotSpotLeft{background-image: url(img/home/slider/arrLeft.png);
-    width: 24px;
-    height: 68px;
-    margin-top: 25px;
-    margin-left: 0px;
-    margin-right: 20px;
-    float: left;}
-.siderDesktop .owl-next{background-image: url(img/home/slider/arrRight.png); margin-top: -67px; width: 24px;     margin-right:-91px; height: 68px; float: right; }
-.siderDesktop .owl-item{ width: initial !important;}
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+
+}
+
+.left_arrow{
+  background: url('images/left-arrow.png') center center no-repeat;
+  height: 110px;
+  width: 35px;
+}
+
+.right_arrow{
+  background: url('images/right-arrow.png') center center no-repeat;
+  height: 110px;
+  width: 35px;
+}
+
+.slide_zone{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 110px;
+  width: 700px;
+  overflow: hidden;
+
+}
+
+.slide_item:last-child{
+  margin-right: 0;
+}
+
+.slide_item{
+    padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  width: 120px;
+  margin-right: 20px;
+  transition: 1s;
+}
+.slide_item.active {
+    width: 370px;
+}
+
+.slider_block .active{
+  width: 420px;
+}
+
+.slide_img{
+  display: flex;
+  justify-content: center;
+  height: 110px;
+  width: 120px;
+  overflow: hidden;
+}
+.slide_img img{width: 120px; height: 110px;}
+.one_img{
+  height: 110px;
+  width: 160px;
+}
+
+.slide_content{
+  display: none;
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  height: 110px;
+  width: 0px;
+  overflow: hidden;
+  transition: 1s;
+}
+.slide_content a {text-decoration: none; color:white;}
+.slide_content a:hover{text-decoration: underline;}
+.cont_active{
+  width: 280px;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.cont_head{
+        padding-top: 0;
+    margin-top: 0px;
+  font-size: 135%;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 20px;
+ 
+}
+
+.cont_text{
+    margin-top: 0;
+  font-size: 100%;
+  color: #fff;
+  margin-left: 20px;
+  width: 260px;
+}
+
+#1{
+  margin-left: 0;
+}
+
+
+
+
+/* ///MAIN SLIDER */
+
+
 .ownerSay{width: 327px; padding-left: 5px; padding-right: 5px;}
 .ownerSay{margin-top: 50px; float:left;}
 .ownerSay .headOwner{ background: rgba(0,0,0,0.9);  font-family: 'Roboto', sans-serif; padding-left: 30px; height: 90px; font-size: 24px; }
